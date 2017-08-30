@@ -1,13 +1,19 @@
 package com.zhanghao.java;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
- * Created by zhangh on 2017/8/12.\
+ * Created by zhangh on 2017/8/12.
  * 判断一个整数是否为回文数
  */
 public class PalindromeNumber {
+
+    private static Logger logger = LoggerFactory.getLogger(PalindromeNumber.class);
+
+
     public static void main(String[] args) {
         int x = 4334;
-
         System.out.println(isPalindrome(x));
     }
 
