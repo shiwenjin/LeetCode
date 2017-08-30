@@ -11,35 +11,39 @@ public class RemoveElement {
     public static void main(String[] args) {
         int[] nums = {3,2,2,3};
         int val = 2;
-        System.out.println(removeElement(nums, val));
+//        System.out.println(removeElement(nums, val));
+        removeElement(nums,2);
     }
 
-    private static int removeElement(int[] nums, int val) {
-        Integer[] a =  new Integer[nums.length];
-        for (int i = 0; i < nums.length; i++)
-            a[i] = Integer.valueOf(nums[i]);
+    private static void removeElement(int[] nums, int val) {
+//        Integer[] a =  new Integer[nums.length];
+//        for (int i = 0; i < nums.length; i++)
+//            a[i] = Integer.valueOf(nums[i]);
+//
+//
+//        ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(a));
+//
+//        Iterator<Integer> sListIterator = arrayList.iterator();
+//
+//        while(sListIterator.hasNext()) {
+//            Integer i = sListIterator.next();
+//            if(i.equals(val))
+//                sListIterator.remove();
+//         }
 
+//         return arrayList.size();
 
-        ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(a));
-
-        Iterator<Integer> sListIterator = arrayList.iterator();
-
-        while(sListIterator.hasNext()) {
-            Integer i = sListIterator.next();
-            if(i.equals(val))
-                sListIterator.remove();
-         }
-
-         return arrayList.size();
 
 //        正确答案：
-//        int num = 0;
-//        for (int i = 0; i< nums.length; i++)
-//        {
-//            if (nums[i] != val)
-//                nums[num++] = nums[i];
-//        }
-//        return num;
+        int num = 0;
+        for (int i = 0; i< nums.length; i++)
+        {
+            if (nums[i] != val)
+                nums[num++] = nums[i];
+        }
+
+        for (int i = 0; i < nums.length; i++)
+            System.out.println(nums[i]);
     }
 
 
